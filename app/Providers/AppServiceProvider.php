@@ -6,6 +6,7 @@ use App\Category;
 use App\CoursePackage;
 use App\Reply;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Schema;
 use App\Channel;
 use App\Discussion;
 use App\User;
@@ -24,6 +25,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        Schema::defaultStringLength(191);
         // View::share('channels' , Channel::all());
         // View::share('categories' , Category::all());
         // View::share('alluser' , User::all());
