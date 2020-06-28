@@ -24,15 +24,15 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        View::share('channels' , Channel::all());
-        View::share('categories' , Category::all());
-        View::share('alluser' , User::all());
-        View::share('us' , UsersCourse::where('user_id',Auth::id())->get());
-        View::share('package' , CoursePackage::all());
+        // View::share('channels' , Channel::all());
+        // View::share('categories' , Category::all());
+        // View::share('alluser' , User::all());
+        // View::share('us' , UsersCourse::where('user_id',Auth::id())->get());
+        // View::share('package' , CoursePackage::all());
 
-        config(['app.locale' => 'id']);
-        Carbon::setLocale('id');
-        \Carbon\Carbon::setLocale('id');
+        // config(['app.locale' => 'id']);
+        // Carbon::setLocale('id');
+        // \Carbon\Carbon::setLocale('id');
 
     }
 
