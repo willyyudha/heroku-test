@@ -1,0 +1,37 @@
+                                                    @if(Auth::user()->admin == 1)
+                                                    <th>
+                                                        <form action="{{route('page.edit.user' , ['id' => $i -> id])}}" method="get">
+                                                            <button type="submit" class="btn btn-info">Edit</button>
+                                                        </form>
+                                                    </th>
+                                                    <th>
+                                                        <form action="{{route('page.user.delete' , ['id' => $i -> id])}}" method="post">
+                                                            <input type="hidden" name="_token" value=" {{csrf_token()}}">
+                                                            {{csrf_field()}}
+                                                            {{method_field('DELETE')}}
+                                                            <button type="submit" class="btn btn-danger">Delete</button>
+                                                        </form>
+                                                    </th>
+                                                    @endif
+                                                    @if(Auth::user()->super_admin == 1)
+                                                    <th>
+                                                        <form action="{{route('admin.store.admin' , ['id' => $i -> id])}}" method="get">
+                                                            <button type="submit" class="btn btn-info">Admin</button>
+                                                        </form>
+                                                    </th>
+                                                    <th>
+                                                        <form action="{{route('superadmin.store.admin' , ['id' => $i -> id])}}" method="get">
+                                                            <button type="submit" class="btn btn-info">Super Admin</button>
+                                                        </form>
+                                                    </th>
+                                                    @endif
+
+
+                                                     @if(Auth::user()->admin == 1)
+                                                     <th>Ubah</th>
+                                                     <th>Hapus</th>
+                                                     @endif
+                                                     @if(Auth::user()->super_admin == 1)
+                                                     <th>Tambah Ke Admin</th>
+                                                     <th>Tambah Ke Super Admin</th>
+                                                     @endif
