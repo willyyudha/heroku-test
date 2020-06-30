@@ -15,8 +15,10 @@ class CreatePaymentLogs extends Migration
     {
         Schema::create('payment_logs', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('usercourse_id');
-            $table->integer('approved_by');
+            $table->string('name');
+			$table->string('course');
+			$table->string('approved_by');
+            $table->string('total_price');
             $table->date('payments_date');
             $table->timestamps();
         });

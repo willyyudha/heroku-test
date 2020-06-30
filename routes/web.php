@@ -148,7 +148,6 @@ Route::group(['middleware' => ['admin' && 'superadmin']] , function (){
     Route::get('/superadmin/category/search', 'CategoryController@searchcategory')->name('page.search.category.superadmin');
     Route::get('/superadmin/coursepackage/search', 'PackageCourseController@searchpackage')->name('page.search.coursepackage.superadmin');
     Route::get('/superadmin/paymentsreport/search', 'CoursePaymentsReportController@search_report')->name('page.search.reportpayments.superadmin');
-    Route::get('/superadmin/paymentsreport/pdf', 'PaymentReportPdfController@get_pdf')->name('pdf.search.reportpayments.superadmin');
 
 
     Route::get('/admin/edit/user/{id}', 'AdminController@editpageuser')->name('page.edit.user');

@@ -31,6 +31,12 @@
     <link rel="stylesheet" type="text/css" href="{{asset('rs-plugin/css/settings.css')}}" media="screen" />
 
     <style>
+        /*@media only screen and (orientation:portrait){*/
+            /*body {*/
+                /*height: 100vw;*/
+                /*transform: rotate(90deg);*/
+            /*}*/
+        /*}*/
         @yield('style')
     </style>
 

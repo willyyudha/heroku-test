@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
     {
         // use composer dump-autoload if seeder class not found
          $this->call(userseeder::class);
-         $this->call(ChannelsSeeder::class);
-         $this->call(CategoriesSeeder::class);
+         //$this->call(ChannelsSeeder::class);
+         //$this->call(CategoriesSeeder::class);
     }
 }

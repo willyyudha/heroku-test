@@ -35,30 +35,15 @@
                             <form class="pull-left" style="margin-bottom: 5px" action="{{route('page.search.reportpayments.superadmin')}}" method="get">
                                 {{csrf_field()}}
                                 <label style="margin-right: 55px">Tgl Awal</label><label>Tgl Akhir</label><br>
-                                <input type="date" id="date" value="{{ old('date') }}" name="date"> <input type="date" value="{{ old('date2') }}" id="date2" name="date2"> <button>Cari</button>&nbsp;&nbsp;&nbsp; <a href="{{route('pdf.search.reportpayments.superadmin')}}">cetak pdf</a>
-                                {{--<div class="row">--}}
-                                {{--<div class="col-lg-6 col-sm-12">--}}
-                                    {{--<div class="form-group">--}}
-                                        {{--<label>Tgl Awal</label>--}}
-                                        {{--<div class="input-group date">--}}
-                                            {{--<div class="input-group-addon">--}}
-                                                {{--<span class="glyphicon glyphicon-th"></span>--}}
-                                            {{--</div>--}}
-                                            {{--<input type="date" class="form-control datepicker" name="date" id="date">--}}
-                                        {{--</div>--}}
-                                        {{--<label>Tgl Akhir</label>--}}
-                                        {{--<div class="input-group date">--}}
-                                            {{--<div class="input-group-addon">--}}
-                                                {{--<span class="glyphicon glyphicon-th"></span>--}}
-                                            {{--</div>--}}
-                                            {{--<input type="date" class="form-control datepicker" name="date2" id="date2">--}}
-                                        {{--</div>--}}
-                                        {{--<button style="margin-top: 5px;" class="btn-block btn-info" type="submit">Cari</button>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
+                                <input type="date" id="date_start" value="{{ request()->input('date_start') or old('date_start') }}" name="date_start">
+                                <input type="date" value="{{ request()->input('date_old') or old('date_end') }}" id="date_end" name="date_end">
+                                <select id="pilih" name="pilih">
+                                    <option value="1">Cetak Tanggal Pdf</option>
+                                    <option value="2">Cari</option>
+                                    <option value="3">Cetak Semua Pdf</option>
+                                </select>
+                                <button>Ok</button>&nbsp;&nbsp;&nbsp;
                             </form>
-
                             <table id="myTable" class="table table-bordered table-striped">
                                 <thead>
                                 <tr>
