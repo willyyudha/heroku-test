@@ -107,7 +107,10 @@ class PayCourseController extends Controller
     {
         $usercourse = UsersCourse::find($id);
         $payments_log = PaymentLog::where('name',$usercourse->user->full_name)->where('course',$usercourse->package->title)->first();
-        $payments_log->delete();
+		if($payments_log !== null)
+		{
+			$payments_log->delete();
+		}
         $usercourse->payment_status = 0;
         $usercourse->save();
 
