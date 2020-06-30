@@ -16,7 +16,7 @@ class PlayedVideos extends Migration
         Schema::create('played_videos' , function (Blueprint $table){
             $table->increments('id');
             $table->integer('video_id')->unsigned();
-            $table->integer('ucercourse_id')->unsigned();
+            $table->integer('usercourse_id')->unsigned();
             $table->timestamps();
 //            $table->foreign('video_id')->references('id')->on('videos')
 //                ->onDelete('cascade');
