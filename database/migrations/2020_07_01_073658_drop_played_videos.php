@@ -13,7 +13,7 @@ class DropPlayedVideos extends Migration
      */
     public function up()
     {
-        Schema::drop('played_videos);
+        Schema::drop('played_videos');
     }
 
     /**
