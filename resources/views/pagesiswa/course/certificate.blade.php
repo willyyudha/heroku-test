@@ -5,6 +5,7 @@
         <div style="top: 0; left: 0; justify-content: center; align-items: center; position: absolute; width: 990px; height: 590px;">
                 <img style="opacity: 0.3;" src="{{asset('images/course/5457.jpg')}}" alt="" width="990px" height="590px">
         </div>
+		<br>
         <span style="font-family:Lucida Calligraphy; font-size:50px; font-weight:bold">Certificate </span><br>
         <div style="font-family:Lucida Calligraphy; font-size:30px; font-weight:bold">OF Completion</div>
         <br><br>
